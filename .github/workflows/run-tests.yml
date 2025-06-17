@@ -44,3 +44,20 @@ jobs:
       with:
         name: allure-report
         path: allure-report
+
+    - name: Zip Allure Report
+      run: |
+        zip -r allure-report.zip allure-report
+
+    - name: Send Report via Email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: your-email@gmail.com
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: Allure Report - Automated Test Run
+        body: "Please find attached the latest test report."
+        to: client@example.com, tester@example.com
+        from: Appium Test Bot <your-email@gmail.com>
+        attachments: allure-report.zip
