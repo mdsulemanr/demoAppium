@@ -1,3 +1,4 @@
-pytest~=8.4.0
-Appium-Python-Client~=5.1.1
-selenium~=4.33.0
+pytest
+appium-python-client
+allure-pytest
+selenium
