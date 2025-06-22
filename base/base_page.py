@@ -14,3 +14,4 @@ class BasePage:
 
     def get_text(self, locator):
         return self.wait.until(EC.presence_of_element_located(locator)).text.strip()
+

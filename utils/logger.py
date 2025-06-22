@@ -1,5 +1,3 @@
-# utils/logger.py
-
 import logging
 
 
@@ -8,7 +6,7 @@ def get_logger(name="appium-test"):
     if not logger.handlers:
         logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        ch = logging.StreamHandler()
-        ch.setFormatter(formatter)
-        logger.addHandler(ch)
+        stream = logging.StreamHandler()
+        stream.setFormatter(formatter)
+        logger.addHandler(stream)
     return logger

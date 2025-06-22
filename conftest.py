@@ -1,5 +1,3 @@
-# conftest.py – Fixture Setup
-
 import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
