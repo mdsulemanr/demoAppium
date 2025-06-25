@@ -1,0 +1,6 @@
+# constants/assertions.py
+
+ADDITION_RESULT = "5"
+SUBTRACTION_RESULT = "1"
+MULTIPLICATION_RESULT = "6"
+DIVISION_RESULT = "2"
